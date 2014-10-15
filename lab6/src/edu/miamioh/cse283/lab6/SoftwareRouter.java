@@ -7,6 +7,7 @@ package edu.miamioh.cse283.lab6;
  * @author dk
  */
 public class SoftwareRouter {
+	protected Link fwdTable;
 
 	/**
 	 * Adds the given link and [start,stop] address range to this router's routing table.
@@ -16,6 +17,7 @@ public class SoftwareRouter {
 	 * @param stop is the upper-bound of addresses for this link.
 	 */
 	public void addLink(Link link, Address start, Address stop) {
+		fwdTable = link;
 	}
 	
 	/**
@@ -24,6 +26,7 @@ public class SoftwareRouter {
 	 * @param link is the link to be removed from this router's routing table.
 	 */
 	public void removeLink(Link link) {
+		
 	}
 	
 	/**
@@ -32,6 +35,8 @@ public class SoftwareRouter {
 	 * @param pkt is the packet that needs to be forwarded.
 	 */
 	public void receivePacket(Packet pkt) {
-		// once the correct outgoing link has been identified, call link.send(pkt, this); 
+		// once the correct outgoing link has been identified, call link.send(pkt, this);
+		fwdTable.send(pkt);
+		System.out.println("Packet sent");
 	}
 }
