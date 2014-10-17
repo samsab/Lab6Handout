@@ -1,8 +1,9 @@
 package edu.miamioh.cse283.lab6;
 
 /**
- * @author Sam Bowdler
- * @date 17 October 2014
+ * Software network template for CSE283 Lab 6, FS2014.
+ * 
+ * @author dk
  */
 public class SoftwareNetwork {
 
@@ -20,5 +21,7 @@ public class SoftwareNetwork {
 				
 		// packets sent to r1 should wind up at r2:
 		r1.receivePacket(new Packet(new Address(0), new Address(1)));
+		
+		
 	}
 }
