@@ -1,9 +1,8 @@
 package edu.miamioh.cse283.lab6;
 
 /**
- * Software network template for CSE283 Lab 6, FS2014.
- * 
- * @author dk
+ * @author Sam Bowdler
+ * @date 17 October 2014
  */
 public class SoftwareNetwork {
 
@@ -17,7 +16,7 @@ public class SoftwareNetwork {
 		SoftwareRouter r2 = new SoftwareRouter();
 		
 		// build a link from r1->r2 that forwards all traffic:
-		r1.addLink(new Link(r2), new Address(0), new Address(-1));
+		r1.addLink(new Link(r2), new Address(0), 0);
 				
 		// packets sent to r1 should wind up at r2:
 		r1.receivePacket(new Packet(new Address(0), new Address(1)));

@@ -1,9 +1,8 @@
 package edu.miamioh.cse283.lab6;
 
 /**
- * Software link template for CSE283 Lab 6, FS2014.
- * 
- * @author dk
+ * @author Sam Bowdler
+ * @date 17 October 2014
  */
 public class Link {
 	protected SoftwareRouter dst;
